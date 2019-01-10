@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XBt-zw-d87">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-mQ-Mb3">
+                                <rect key="frame" x="94.5" y="318.5" width="186" height="30"/>
+                                <state key="normal" title="Push to TestViewController"/>
+                                <connections>
+                                    <segue destination="PHP-bf-pUs" kind="push" id="F6M-b8-99g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9K1-mQ-Mb3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ala-9t-PcB"/>
+                            <constraint firstItem="9K1-mQ-Mb3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xMV-SF-M0k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZP7-xJ-SYh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--TestViewController-->
+        <scene sceneID="Egj-4a-T1R">
+            <objects>
+                <viewController id="PHP-bf-pUs" customClass="TestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mv-V2-5uc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-Kp-ZcT">
+                                <rect key="frame" x="61" y="350.5" width="253" height="30"/>
+                                <state key="normal" title="Add child view controller the 1st time"/>
+                                <connections>
+                                    <action selector="firstTimeClick:" destination="PHP-bf-pUs" eventType="touchUpInside" id="etn-S6-SUQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9op-SQ-27p">
+                                <rect key="frame" x="52" y="390.5" width="271" height="30"/>
+                                <state key="normal" title="Request complete &amp;&amp; Add the 2nd time"/>
+                                <connections>
+                                    <action selector="twiceTimeClick:" destination="PHP-bf-pUs" eventType="touchUpInside" id="piL-4z-aMC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9op-SQ-27p" firstAttribute="top" secondItem="FGO-Kp-ZcT" secondAttribute="bottom" constant="10" id="6g4-Xg-gZA"/>
+                            <constraint firstItem="9op-SQ-27p" firstAttribute="centerX" secondItem="FGO-Kp-ZcT" secondAttribute="centerX" id="fVp-Mz-hGs"/>
+                            <constraint firstItem="FGO-Kp-ZcT" firstAttribute="centerX" secondItem="pYa-C4-P1P" secondAttribute="centerX" id="nKm-hI-ary"/>
+                            <constraint firstItem="FGO-Kp-ZcT" firstAttribute="top" secondItem="pYa-C4-P1P" secondAttribute="top" constant="286.5" id="oNn-fx-kOR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pYa-C4-P1P"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TestViewController" id="V1P-Sy-QeB"/>
+                    <connections>
+                        <outlet property="firstBtnTopMarginConstraint" destination="oNn-fx-kOR" id="pDn-fV-uKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bjp-7J-BJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Phb-TB-232">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XBt-zw-d87" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YpC-VZ-QVy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eJu-kd-tGH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5c-RQ-mFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="134"/>
+        </scene>
+    </scenes>
+</document>
